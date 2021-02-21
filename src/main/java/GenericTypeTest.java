@@ -13,6 +13,7 @@ import java.util.Set;
  */
 public class GenericTypeTest<T> {
 
+    private String str;
     private List<String>[] genericArrayType;
     private Set<T> typeVariableSet;
     private Set<String> parameterizedTypeSet;
@@ -48,6 +49,8 @@ public class GenericTypeTest<T> {
             }
             System.out.println("\t getRawType:" + parameterizedType.getRawType());
             System.out.println("\t getOwnerType:" + parameterizedType.getOwnerType());
+        } else {
+            System.out.println("\t 不是ParameterizedType的:" + type + type.getTypeName());
         }
     }
 

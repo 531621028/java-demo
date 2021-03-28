@@ -8,6 +8,10 @@ public class CloneTest implements Cloneable {
 
     private final String name;
 
+    public CloneTest() {
+        this(null);
+    }
+
     public CloneTest(String name) {
         this.name = name;
         System.out.println("调用构造器了");

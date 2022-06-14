@@ -12,6 +12,7 @@ public class CloneTest implements Cloneable {
         this(null);
     }
 
+    // clone方法不会调用构造函数
     public CloneTest(String name) {
         this.name = name;
         System.out.println("调用构造器了");
@@ -32,6 +33,6 @@ public class CloneTest implements Cloneable {
 
     @Override
     public String toString() {
-        return MessageFormat.format("name:{0}", this.name);
+        return MessageFormat.format("name:{0}:{1}", this.name, hashCode());
     }
 }

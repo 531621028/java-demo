@@ -17,7 +17,7 @@ public class ScheduledThreadPoolExecutorTest {
     public void testDelayedTask() {
         System.out.println("开始测试时间" + LocalTime.now());
         count.increment();
-        // 已结束时间开始计算delay
+        // 以结束时间开始计算delay
         executor.scheduleWithFixedDelay(() -> {
             System.out.println("第" + count + "次开始时间: " + LocalTime.now());
             sleep(SECONDS, 10);

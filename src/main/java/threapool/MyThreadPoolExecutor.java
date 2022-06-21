@@ -1,12 +1,13 @@
 package threapool;
 
 import java.util.concurrent.BlockingQueue;
-import java.util.concurrent.CompletionException;
 import java.util.concurrent.Executor;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicInteger;
 
 /**
+ * 模拟线程池的工作
+ *
  * @author kang
  * @since 2021/3/28
  */
@@ -100,6 +101,9 @@ public class MyThreadPoolExecutor implements Executor {
         try {
             return taskQueue.poll(1, TimeUnit.SECONDS);
         } catch (InterruptedException e) {
+            if (Thread.currentThread().isInterrupted()) {
+                Thread.currentThread().interrupt();
+            }
             // 线程中断了，返回null可以结束当前线程
             // 当前线程都要结束了，理应要把runningCount的数量减一
             runningCount.decrementAndGet();

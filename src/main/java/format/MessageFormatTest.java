@@ -19,7 +19,12 @@ public class MessageFormatTest {
      */
 
     public static void main(String[] args) {
+        int c = add(1, 2);
         System.out.println(new DecimalFormat("000000").format(1));
+    }
+
+    private static int add(int a, int b) {
+        return a + b;
     }
 
 }

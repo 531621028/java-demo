@@ -3,6 +3,7 @@ package generic;
 public class TestGenericDemo1 {
 
     // TestGenericDemo1.<Integer>指定泛型
+    // 类型检查就是针对引用的，谁是一个引用，用这个引用调用泛型方法，就会对这个引用调用的方法进行类型检测，而无关它真正引用的对象。
     public static void main(String[] args) {
 
         /**不指定泛型的时候*/
@@ -12,7 +13,7 @@ public class TestGenericDemo1 {
 
         /**指定泛型的时候*/
         int a = TestGenericDemo1.<Integer>add(1, 2); //指定了Integer，所以只能为Integer类型或者其子类
-        int b = TestGenericDemo1.<Integer>add(1, 2.2); //编译错误，指定了Integer，不能为Float
+        int b = TestGenericDemo1.<Integer>add(1, 2); //编译错误，指定了Integer，不能为Float
         Number c = TestGenericDemo1.<Number>add(1, 2.2); //指定为Number，所以可以为Integer和Float
     }
 

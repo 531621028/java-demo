@@ -49,7 +49,7 @@ public class ScheduledThreadPoolExecutorTest {
     }
 
     public static void main(String[] args) {
-       // new ScheduledThreadPoolExecutorTest().testDelayedTask();
-        new ScheduledThreadPoolExecutorTest().testRateTask();
+        new ScheduledThreadPoolExecutorTest().testDelayedTask();
+        //  new ScheduledThreadPoolExecutorTest().testRateTask();
     }
 }

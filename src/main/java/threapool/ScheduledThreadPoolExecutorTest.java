@@ -1,3 +1,5 @@
+package threapool;
+
 import static java.util.concurrent.TimeUnit.SECONDS;
 
 import java.time.LocalTime;
@@ -50,6 +52,6 @@ public class ScheduledThreadPoolExecutorTest {
 
     public static void main(String[] args) {
         new ScheduledThreadPoolExecutorTest().testDelayedTask();
-        //  new ScheduledThreadPoolExecutorTest().testRateTask();
+        //  new threapool.ScheduledThreadPoolExecutorTest().testRateTask();
     }
 }
